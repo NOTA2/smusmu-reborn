@@ -1,0 +1,17 @@
+{
+  "name": "smusmu-reborn",
+  "description": "스뮤스뮤 개편",
+  "main": "app.js",
+  "authors": [
+    "team smusmu"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/NOTA2/smusmu-reborn",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

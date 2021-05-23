@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "outDir": "../dist",
+      "target": "es6", //빌드 결과물을 es6 방식을 한다는 뜻
+      "module": "commonJS", // 빌과의 모듈 방식을 commonjs 방식을 한다는 뜻
+      "moduleResolution": "Node",//모듈 해석 방식은 node 처럼 한다는 뜻
+      "sourceMap": true, // .map.js 파일도 함께 생성한다는 뜻
+      "noImplicitAny": false, // 암시적으로 선언되었는데 any로 추론되면 에러를 알려준다.
+      "allowJs": false, // js 파일 허용
+      "esModuleInterop": true  // import 시 commonjs 와 es6 의 차이때문에 발생하는 문제 방지
+    }
+}
