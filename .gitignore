@@ -1,0 +1,22 @@
+# build output
+/**/out/
+/**/classes/
+/**/build/
+/**/dist/
+
+# all hidden files and directories
+/**/.*
+
+/**/bower_components/
+/**/node_modules/
+/**/npm-debug.log
+
+# except .gitignore file
+!/.gitignore
+!/.gitmodules
+!/.github
+!/.babelrc
+!/**/.eslintrc
+!/**/.npmrc
+
+/**/key/
