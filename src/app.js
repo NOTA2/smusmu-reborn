@@ -1,4 +1,5 @@
 console.log('APIs initialize');
+// import './styles/base.css';
 
 var app = require('./scripts/config/express')();
 var defaultObj = require('./scripts/config/defaultVariable');
@@ -25,6 +26,6 @@ app.use(function (err, req, res, next) {
 })
 
 //서버를 계속 유지
-app.listen(80, function () {
-  console.log('Connect 80 port');
+app.listen(8080, function () {
+  console.log('Connect 8080 port!!');
 });

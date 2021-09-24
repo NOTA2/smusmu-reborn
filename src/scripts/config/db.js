@@ -1,5 +1,5 @@
 const fs = require('fs');
-const dbKey = fs.readFileSync('key/dbKey', 'utf-8').replace(/\n/g, '');
+const dbKey = 'Ehdngus23$'; //fs.readFileSync('key/dbKey', 'utf-8').replace(/\n/g, '');
 const mysql = require('mysql2');
 
 const conn = mysql.createConnection({
@@ -12,4 +12,4 @@ const conn = mysql.createConnection({
 })
 
 conn.connect();
-module.exports = conn;
+export default conn;

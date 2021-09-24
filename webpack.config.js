@@ -4,10 +4,13 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
 const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   entry: './src/app.js',
   mode: 'development',
+  target: "node",
+  externals: [nodeExternals()],
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
     fallback: {

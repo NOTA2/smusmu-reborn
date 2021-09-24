@@ -1,4 +1,6 @@
 const conn = require('../../../config/db');
+
+// import conn from '../../../config/db';
 const defaultObj = require('../../../config/defaultVariable');
 const router = require('express').Router();
 

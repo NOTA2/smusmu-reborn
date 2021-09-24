@@ -3,8 +3,6 @@ module.exports = function (passport) {
 
   var register = require('./register');
 
-  router.use('/find', find);
-
   //순서 중요! 바꾸지 말것!
 
   router.get('/logout', (req, res) => {

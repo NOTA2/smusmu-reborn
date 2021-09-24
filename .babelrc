@@ -10,5 +10,6 @@
                 "shippedProposals": true
             }
         ]
-    ]
+    ],
+    "sourceType": "unambiguous"
 }

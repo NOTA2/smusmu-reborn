@@ -4,7 +4,7 @@ module.exports = function () {
   var session = require('express-session');
   var MySQLSessionStore = require('express-mysql-session')(session);
   const fs = require('fs');
-  const dbKey = fs.readFileSync('key/dbKey', 'utf-8').replace(/\n/g, '');;
+  const dbKey = 'Ehdngus23$' //fs.readFileSync('key/dbKey', 'utf-8').replace(/\n/g, '');;
   var compression = require('compression');
   var helmet = require('helmet');
   const cookieParser = require('cookie-parser');
@@ -12,10 +12,10 @@ module.exports = function () {
   var app = express();
   //템플릿 엔진 설정 및 폴더 설정
   app.set('view engine', 'pug');
-  // app.set('views', 'views');
+  app.set('views', 'src/views');
   app.locals.pretty = true; //jade로 웹페이지를 만들기 때문에 태그를 깔끔하게 정리해주는 설정
 
-  app.use(express.static('public'));
+  app.use(express.static('src/public'));
   app.use(compression());
   app.use(helmet());
 
