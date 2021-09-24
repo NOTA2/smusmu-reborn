@@ -2,13 +2,16 @@ const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
 const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
 const nodeExternals = require('webpack-node-externals');
+const NodemonPlugin = require('nodemon-webpack-plugin');
 
 module.exports = {
   entry: './src/app.js',
   mode: 'development',
+  /**
+   * server-side code에 webpack 사용을 위한 설정
+   */
   target: "node",
   externals: [nodeExternals()],
   resolve: {
@@ -74,16 +77,13 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebPackPlugin({
-        filename: 'output.pug',
-        minify: false
-      }),
-    new HtmlWebpackPugPlugin(),
+    new CleanWebpackPlugin(),
+    new HtmlWebPackPlugin(),
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css"
     }),
     new NodePolyfillPlugin(),
-    new CleanWebpackPlugin()
+    new NodemonPlugin()
   ]
 };

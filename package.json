@@ -4,8 +4,9 @@
   "description": "스뮤스뮤 개편",
   "main": "app.js",
   "scripts": {
-    "build": "npm cache verify && npm install && bower install && webpack --watch --progress --config webpack.config.js",
-    "local-start": "sudo node dist/bundle.js"
+    "local-start": "npm run local-build",
+    "local-build": "npm cache verify && npm install && bower install && webpack --watch --progress --config webpack.config.js",
+    "local-server": "nodemon \"./dist/bundle.js\" --watch \"./dist\""
   },
   "repository": {
     "type": "git",
@@ -43,10 +44,11 @@
     "fs": "0.0.1-security",
     "helmet": "^4.6.0",
     "html-webpack-plugin": "^5.3.1",
-    "html-webpack-pug-plugin": "^3.0.0",
     "mini-css-extract-plugin": "^1.6.0",
     "mysql2": "^2.3.0",
     "node-polyfill-webpack-plugin": "^1.1.4",
+    "nodemon": "^2.0.13",
+    "nodemon-webpack-plugin": "^4.5.2",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "pbkdf2-password": "^1.2.1",
@@ -90,7 +92,6 @@
     "fs": "0.0.1-security",
     "helmet": "^4.6.0",
     "html-webpack-plugin": "^5.3.1",
-    "html-webpack-pug-plugin": "^3.0.0",
     "mini-css-extract-plugin": "^1.6.0",
     "mysql2": "^2.3.0",
     "node-polyfill-webpack-plugin": "^1.1.4",
@@ -98,6 +99,7 @@
     "passport-local": "^1.0.0",
     "pbkdf2-password": "^1.2.1",
     "phantom": "^6.3.0",
+    "pm2": "^5.1.1",
     "process": "^0.11.10",
     "pug": "^3.0.2",
     "querystring-es3": "^0.2.1",
